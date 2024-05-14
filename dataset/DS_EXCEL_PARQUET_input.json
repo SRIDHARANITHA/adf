@@ -1,0 +1,55 @@
+{
+	"name": "DS_EXCEL_PARQUET_input",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_EXCEL_PARQUET_input",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Excel",
+		"typeProperties": {
+			"sheetName": "Sheet1",
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "file_example_XLS_10.xls",
+				"folderPath": "Excel",
+				"fileSystem": "adlsinput"
+			},
+			"firstRowAsHeader": false
+		},
+		"schema": [
+			{
+				"name": "0",
+				"type": "String"
+			},
+			{
+				"name": "First Name",
+				"type": "String"
+			},
+			{
+				"name": "Last Name",
+				"type": "String"
+			},
+			{
+				"name": "Gender",
+				"type": "String"
+			},
+			{
+				"name": "Country",
+				"type": "String"
+			},
+			{
+				"name": "Age",
+				"type": "String"
+			},
+			{
+				"name": "Date",
+				"type": "String"
+			},
+			{
+				"name": "Id",
+				"type": "String"
+			}
+		]
+	}
+}
