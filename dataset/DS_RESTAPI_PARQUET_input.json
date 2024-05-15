@@ -1,0 +1,12 @@
+{
+	"name": "DS_RESTAPI_PARQUET_input",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_RESTAPI_PARQUET_input",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "RestResource",
+		"schema": []
+	}
+}
