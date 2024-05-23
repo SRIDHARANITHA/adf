@@ -35,6 +35,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'LS_EXCEL_PARQUET_output'"
 		},
+		"LS_GETMETADATA_FILEFORMAT_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_GETMETADATA_FILEFORMAT'"
+		},
 		"LS_JSON_CSV_input_accountKey": {
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'LS_JSON_CSV_input'"
@@ -64,6 +68,10 @@
 			"defaultValue": "https://adlsdevsales1.dfs.core.windows.net/"
 		},
 		"LS_EXCEL_PARQUET_output_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevsales1.dfs.core.windows.net/"
+		},
+		"LS_GETMETADATA_FILEFORMAT_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://adlsdevsales1.dfs.core.windows.net/"
 		},
@@ -131,6 +139,9 @@
 					"LS_EXCEL_PARQUET_output_accountKey": {
 						"value": "[parameters('LS_EXCEL_PARQUET_output_accountKey')]"
 					},
+					"LS_GETMETADATA_FILEFORMAT_accountKey": {
+						"value": "[parameters('LS_GETMETADATA_FILEFORMAT_accountKey')]"
+					},
 					"LS_JSON_CSV_input_accountKey": {
 						"value": "[parameters('LS_JSON_CSV_input_accountKey')]"
 					},
@@ -154,6 +165,9 @@
 					},
 					"LS_EXCEL_PARQUET_output_properties_typeProperties_url": {
 						"value": "[parameters('LS_EXCEL_PARQUET_output_properties_typeProperties_url')]"
+					},
+					"LS_GETMETADATA_FILEFORMAT_properties_typeProperties_url": {
+						"value": "[parameters('LS_GETMETADATA_FILEFORMAT_properties_typeProperties_url')]"
 					},
 					"LS_JSON_CSV_input_properties_typeProperties_url": {
 						"value": "[parameters('LS_JSON_CSV_input_properties_typeProperties_url')]"
