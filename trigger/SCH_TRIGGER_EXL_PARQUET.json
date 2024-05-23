@@ -2,7 +2,7 @@
 	"name": "SCH_TRIGGER_EXL_PARQUET",
 	"properties": {
 		"annotations": [],
-		"runtimeState": "Stopped",
+		"runtimeState": "Started",
 		"pipelines": [
 			{
 				"pipelineReference": {
