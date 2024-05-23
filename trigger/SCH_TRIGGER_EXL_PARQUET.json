@@ -17,6 +17,7 @@
 				"frequency": "Minute",
 				"interval": 1,
 				"startTime": "2024-05-23T15:15:00",
+				"endTime": "2024-05-25T15:16:38",
 				"timeZone": "India Standard Time"
 			}
 		}
