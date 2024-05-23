@@ -2,7 +2,7 @@
 	"name": "SCH_TRIGGER_CSV_PARUET",
 	"properties": {
 		"annotations": [],
-		"runtimeState": "Started",
+		"runtimeState": "Stopped",
 		"pipelines": [
 			{
 				"pipelineReference": {
