@@ -1,0 +1,195 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "adf-dev-sales-us1"
+		},
+		"LS_CSV_PARQUET_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_CSV_PARQUET'"
+		},
+		"LS_CSV_PARQUET_output_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_CSV_PARQUET_output'"
+		},
+		"LS_DELETE_FILES_LOGS_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'LS_DELETE_FILES_LOGS'"
+		},
+		"LS_DEL_OLD_CSV_FILE_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_DEL_OLD_CSV_FILE'"
+		},
+		"LS_ERROR_LOGS_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'LS_ERROR_LOGS'"
+		},
+		"LS_EXCEL_PARQUET_input_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_EXCEL_PARQUET_input'"
+		},
+		"LS_EXCEL_PARQUET_output_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_EXCEL_PARQUET_output'"
+		},
+		"LS_JSON_CSV_input_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_JSON_CSV_input'"
+		},
+		"LS_JSON_CSV_output_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_JSON_CSV_output'"
+		},
+		"LS_RESTAPI_PARQUET_output_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_RESTAPI_PARQUET_output'"
+		},
+		"LS_CSV_PARQUET_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevsales1.dfs.core.windows.net/"
+		},
+		"LS_CSV_PARQUET_output_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevsales1.dfs.core.windows.net/"
+		},
+		"LS_DEL_OLD_CSV_FILE_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevsales1.dfs.core.windows.net/"
+		},
+		"LS_EXCEL_PARQUET_input_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevsales1.dfs.core.windows.net/"
+		},
+		"LS_EXCEL_PARQUET_output_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevsales1.dfs.core.windows.net/"
+		},
+		"LS_JSON_CSV_input_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevsales1.dfs.core.windows.net/"
+		},
+		"LS_JSON_CSV_output_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevsales1.dfs.core.windows.net/"
+		},
+		"LS_RESTAPI_PARQUET_input_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://retoolapi.dev/5yDVOt/data"
+		},
+		"LS_RESTAPI_PARQUET_output_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevsales1.dfs.core.windows.net/"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "adf-dev-sales-us1_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"LS_CSV_PARQUET_accountKey": {
+						"value": "[parameters('LS_CSV_PARQUET_accountKey')]"
+					},
+					"LS_CSV_PARQUET_output_accountKey": {
+						"value": "[parameters('LS_CSV_PARQUET_output_accountKey')]"
+					},
+					"LS_DELETE_FILES_LOGS_connectionString": {
+						"value": "[parameters('LS_DELETE_FILES_LOGS_connectionString')]"
+					},
+					"LS_DEL_OLD_CSV_FILE_accountKey": {
+						"value": "[parameters('LS_DEL_OLD_CSV_FILE_accountKey')]"
+					},
+					"LS_ERROR_LOGS_connectionString": {
+						"value": "[parameters('LS_ERROR_LOGS_connectionString')]"
+					},
+					"LS_EXCEL_PARQUET_input_accountKey": {
+						"value": "[parameters('LS_EXCEL_PARQUET_input_accountKey')]"
+					},
+					"LS_EXCEL_PARQUET_output_accountKey": {
+						"value": "[parameters('LS_EXCEL_PARQUET_output_accountKey')]"
+					},
+					"LS_JSON_CSV_input_accountKey": {
+						"value": "[parameters('LS_JSON_CSV_input_accountKey')]"
+					},
+					"LS_JSON_CSV_output_accountKey": {
+						"value": "[parameters('LS_JSON_CSV_output_accountKey')]"
+					},
+					"LS_RESTAPI_PARQUET_output_accountKey": {
+						"value": "[parameters('LS_RESTAPI_PARQUET_output_accountKey')]"
+					},
+					"LS_CSV_PARQUET_properties_typeProperties_url": {
+						"value": "[parameters('LS_CSV_PARQUET_properties_typeProperties_url')]"
+					},
+					"LS_CSV_PARQUET_output_properties_typeProperties_url": {
+						"value": "[parameters('LS_CSV_PARQUET_output_properties_typeProperties_url')]"
+					},
+					"LS_DEL_OLD_CSV_FILE_properties_typeProperties_url": {
+						"value": "[parameters('LS_DEL_OLD_CSV_FILE_properties_typeProperties_url')]"
+					},
+					"LS_EXCEL_PARQUET_input_properties_typeProperties_url": {
+						"value": "[parameters('LS_EXCEL_PARQUET_input_properties_typeProperties_url')]"
+					},
+					"LS_EXCEL_PARQUET_output_properties_typeProperties_url": {
+						"value": "[parameters('LS_EXCEL_PARQUET_output_properties_typeProperties_url')]"
+					},
+					"LS_JSON_CSV_input_properties_typeProperties_url": {
+						"value": "[parameters('LS_JSON_CSV_input_properties_typeProperties_url')]"
+					},
+					"LS_JSON_CSV_output_properties_typeProperties_url": {
+						"value": "[parameters('LS_JSON_CSV_output_properties_typeProperties_url')]"
+					},
+					"LS_RESTAPI_PARQUET_input_properties_typeProperties_url": {
+						"value": "[parameters('LS_RESTAPI_PARQUET_input_properties_typeProperties_url')]"
+					},
+					"LS_RESTAPI_PARQUET_output_properties_typeProperties_url": {
+						"value": "[parameters('LS_RESTAPI_PARQUET_output_properties_typeProperties_url')]"
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "adf-dev-sales-us1_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'adf-dev-sales-us1_ArmTemplate_0')]"
+			]
+		}
+	]
+}
