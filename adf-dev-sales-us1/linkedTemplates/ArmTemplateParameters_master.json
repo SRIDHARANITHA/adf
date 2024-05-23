@@ -26,6 +26,9 @@
 		"LS_EXCEL_PARQUET_output_accountKey": {
 			"value": ""
 		},
+		"LS_FOREACH_FILTER_DATA_accountKey": {
+			"value": ""
+		},
 		"LS_GETMETADATA_FILEFORMAT_accountKey": {
 			"value": ""
 		},
@@ -51,6 +54,9 @@
 			"value": "https://adlsdevsales1.dfs.core.windows.net/"
 		},
 		"LS_EXCEL_PARQUET_output_properties_typeProperties_url": {
+			"value": "https://adlsdevsales1.dfs.core.windows.net/"
+		},
+		"LS_FOREACH_FILTER_DATA_properties_typeProperties_url": {
 			"value": "https://adlsdevsales1.dfs.core.windows.net/"
 		},
 		"LS_GETMETADATA_FILEFORMAT_properties_typeProperties_url": {
