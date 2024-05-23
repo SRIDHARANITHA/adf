@@ -1,0 +1,24 @@
+{
+	"name": "SCH_TRIGGER_EXL_PARQUET",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "PL_EXL_PARQUET",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Minute",
+				"interval": 1,
+				"startTime": "2024-05-23T15:15:00",
+				"timeZone": "India Standard Time"
+			}
+		}
+	}
+}
