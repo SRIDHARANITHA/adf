@@ -1,5 +1,5 @@
 {
-	"name": "TR_CSV_PARQUET_SCHEDULE_TRIGGER",
+	"name": "SCH_TR_CSV_PARQUET_SCHEDULE_TRIGGER",
 	"properties": {
 		"annotations": [],
 		"runtimeState": "Started",
