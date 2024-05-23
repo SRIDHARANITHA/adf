@@ -1,0 +1,25 @@
+{
+	"name": "SCH_TRIGGER_CSV_PARUET",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "PL_CSV_PARQUET",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Minute",
+				"interval": 1,
+				"startTime": "2024-05-23T14:56:00",
+				"endTime": "2024-05-24T14:56:00",
+				"timeZone": "India Standard Time"
+			}
+		}
+	}
+}

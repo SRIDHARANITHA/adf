@@ -11,7 +11,7 @@
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"fileName": "employee_data.csv",
-				"folderPath": "csv",
+				"folderPath": "CSV",
 				"fileSystem": "adlsinput"
 			},
 			"columnDelimiter": ",",
